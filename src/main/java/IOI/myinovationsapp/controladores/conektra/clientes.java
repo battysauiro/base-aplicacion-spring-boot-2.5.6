@@ -21,12 +21,32 @@ public class clientes {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
     }
+
+    @GetMapping("/obtener-cliente/{idCliente}")
+    public String obtenerlienteConektra(@PathVariable String idCliente) {
+        try {
+            return clientesConektraServicio.obtenerCliente(idCliente);
+        } catch (Exception e) {
+            return "Error al realizar la solicitud: " + e.getMessage();
+        }
+    }
     @PostMapping()
     public String crearClienteConektra(@RequestBody ClienteDTO clienteDTO) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonString = objectMapper.writeValueAsString(clienteDTO);
             return clientesConektraServicio.agregarCliente(jsonString);
+        } catch (Exception e) {
+            return "Error al realizar la solicitud: " + e.getMessage();
+        }
+    }
+
+    @PutMapping("/editar-cliente/{idCliente}")
+    public String editarClienteConektra(@RequestBody ClienteDTO clienteDTO,@PathVariable String idCliente) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonString = objectMapper.writeValueAsString(clienteDTO);
+            return clientesConektraServicio.editarCliente(jsonString,idCliente);
         } catch (Exception e) {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
