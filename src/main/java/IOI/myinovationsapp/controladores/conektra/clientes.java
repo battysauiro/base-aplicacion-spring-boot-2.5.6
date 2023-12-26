@@ -51,4 +51,13 @@ public class clientes {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
     }
+
+    @DeleteMapping("/eliminar-cliente/{idCliente}")
+    public String eliminarClienteConektra(@PathVariable String idCliente) {
+        try {
+            return clientesConektraServicio.eliminarCliente(idCliente);
+        } catch (Exception e) {
+            return "Error al realizar la solicitud: " + e.getMessage();
+        }
+    }
 }
