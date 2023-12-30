@@ -23,7 +23,7 @@ public class clientes {
     }
 
     @GetMapping("/obtener-cliente/{idCliente}")
-    public String obtenerlienteConektra(@PathVariable String idCliente) {
+    public String obtenerClienteConektra(@PathVariable String idCliente) {
         try {
             return clientesConektraServicio.obtenerCliente(idCliente);
         } catch (Exception e) {
