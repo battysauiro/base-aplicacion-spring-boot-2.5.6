@@ -8,54 +8,54 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/conektra-clientes")
-public class clientes {
+public class clientesControlador {
 
     @Autowired
     private ClientesConektraServicioImpl clientesConektraServicio;
 
-    @GetMapping("/listar/{url}")
-    public String listaClientesConektra(@PathVariable String url) {
+    @GetMapping("/listar/{token}")
+    public String listaClientesConektra(@PathVariable String token) {
         try {
-            return clientesConektraServicio.obtenerClientes("url");
+            return clientesConektraServicio.obtenerClientes(token);
         } catch (Exception e) {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
     }
 
-    @GetMapping("/obtener-cliente/{idCliente}")
-    public String obtenerClienteConektra(@PathVariable String idCliente) {
+    @GetMapping("/obtener-cliente/{token}/{idCliente}")
+    public String obtenerClienteConektra(@PathVariable String token,@PathVariable String idCliente) {
         try {
-            return clientesConektraServicio.obtenerCliente(idCliente);
+            return clientesConektraServicio.obtenerCliente(token,idCliente);
         } catch (Exception e) {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
     }
-    @PostMapping()
-    public String crearClienteConektra(@RequestBody ClienteDTO clienteDTO) {
+    @PostMapping("/{token}")
+    public String crearClienteConektra(@RequestBody ClienteDTO clienteDTO,@PathVariable String token) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonString = objectMapper.writeValueAsString(clienteDTO);
-            return clientesConektraServicio.agregarCliente(jsonString);
+            return clientesConektraServicio.agregarCliente(token,jsonString);
         } catch (Exception e) {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
     }
 
-    @PutMapping("/editar-cliente/{idCliente}")
-    public String editarClienteConektra(@RequestBody ClienteDTO clienteDTO,@PathVariable String idCliente) {
+    @PutMapping("/editar-cliente/{token}/{idCliente}")
+    public String editarClienteConektra(@PathVariable String token,@RequestBody ClienteDTO clienteDTO,@PathVariable String idCliente) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonString = objectMapper.writeValueAsString(clienteDTO);
-            return clientesConektraServicio.editarCliente(jsonString,idCliente);
+            return clientesConektraServicio.editarCliente(token,jsonString,idCliente);
         } catch (Exception e) {
             return "Error al realizar la solicitud: " + e.getMessage();
         }
     }
 
-    @DeleteMapping("/eliminar-cliente/{idCliente}")
-    public String eliminarClienteConektra(@PathVariable String idCliente) {
+    @DeleteMapping("/eliminar-cliente/{token}/{idCliente}")
+    public String eliminarClienteConektra(@PathVariable String token,@PathVariable String idCliente) {
         try {
-            return clientesConektraServicio.eliminarCliente(idCliente);
+            return clientesConektraServicio.eliminarCliente(token,idCliente);
         } catch (Exception e) {
             return "Error al realizar la solicitud: " + e.getMessage();
         }

@@ -33,4 +33,7 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "persona_id")
     private Persona persona;
+
+    @Column(name = "token_conektra", nullable = false)
+    private String tokenConektra;
 }

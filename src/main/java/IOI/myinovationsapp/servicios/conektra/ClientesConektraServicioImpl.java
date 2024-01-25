@@ -8,14 +8,14 @@ public class ClientesConektraServicioImpl {
 
     OkHttpClient client = new OkHttpClient();
 
-    public String obtenerClientes(String url) throws Exception {
+    public String obtenerClientes(String token) throws Exception {
 
         Request request = new Request.Builder()
                 .url("https://api.conekta.io/customers?limit=20")
                 .get()
                 .addHeader("accept", "application/vnd.conekta-v2.1.0+json")
                 .addHeader("Accept-Language", "es")
-                .addHeader("authorization", "Bearer key_gRHfeL3s1vZ0mMbSpuQRkQF")
+                .addHeader("authorization", "Bearer "+token)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
@@ -27,14 +27,14 @@ public class ClientesConektraServicioImpl {
         }
     }
 
-    public String obtenerCliente(String idCliente) throws Exception {
+    public String obtenerCliente(String token,String idCliente) throws Exception {
 
         Request request = new Request.Builder()
                 .url("https://api.conekta.io/customers/"+idCliente)
                 .get()
                 .addHeader("accept", "application/vnd.conekta-v2.1.0+json")
                 .addHeader("Accept-Language", "es")
-                .addHeader("authorization", "Bearer key_gRHfeL3s1vZ0mMbSpuQRkQF")
+                .addHeader("authorization", "Bearer "+token)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
@@ -46,7 +46,7 @@ public class ClientesConektraServicioImpl {
         }
     }
 
-    public String agregarCliente(String json) throws Exception{
+    public String agregarCliente(String token,String json) throws Exception{
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, json);
         Request request = new Request.Builder()
@@ -55,7 +55,7 @@ public class ClientesConektraServicioImpl {
                 .addHeader("accept", "application/vnd.conekta-v2.1.0+json")
                 .addHeader("Accept-Language", "es")
                 .addHeader("content-type", "application/json")
-                .addHeader("authorization", "Bearer key_gRHfeL3s1vZ0mMbSpuQRkQF")
+                .addHeader("authorization", "Bearer "+token)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
@@ -67,7 +67,7 @@ public class ClientesConektraServicioImpl {
         }
     }
 
-    public String editarCliente(String json,String idCliente) throws Exception{
+    public String editarCliente(String token,String json,String idCliente) throws Exception{
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, json);
         Request request = new Request.Builder()
@@ -76,7 +76,7 @@ public class ClientesConektraServicioImpl {
                 .addHeader("accept", "application/vnd.conekta-v2.1.0+json")
                 .addHeader("Accept-Language", "es")
                 .addHeader("content-type", "application/json")
-                .addHeader("authorization", "Bearer key_gRHfeL3s1vZ0mMbSpuQRkQF")
+                .addHeader("authorization", "Bearer "+token)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {
@@ -88,14 +88,14 @@ public class ClientesConektraServicioImpl {
         }
     }
 
-    public String eliminarCliente(String idCliente) throws Exception {
+    public String eliminarCliente(String token,String idCliente) throws Exception {
 
         Request request = new Request.Builder()
                 .url("https://api.conekta.io/customers/"+idCliente)
                 .delete(null)
                 .addHeader("accept", "application/vnd.conekta-v2.1.0+json")
                 .addHeader("Accept-Language", "es")
-                .addHeader("authorization", "Bearer key_gRHfeL3s1vZ0mMbSpuQRkQF")
+                .addHeader("authorization", "Bearer "+token)
                 .build();
 
         try (Response response = client.newCall(request).execute()) {

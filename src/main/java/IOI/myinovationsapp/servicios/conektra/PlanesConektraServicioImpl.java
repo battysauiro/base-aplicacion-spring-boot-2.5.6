@@ -61,7 +61,6 @@ public class PlanesConektraServicioImpl {
         // Crear un objeto JSON para representar los datos
 
         JSONObject jsonBody = new JSONObject();
-
         jsonBody.put("amount", planDTO.getAmount()!=null?planDTO.getAmount():0);
         jsonBody.put("currency", planDTO.getCurrency()!=null || planDTO.getCurrency().length()>0?planDTO.getCurrency():"MXN");
         if(planDTO.getExpiry_count()!=null){
