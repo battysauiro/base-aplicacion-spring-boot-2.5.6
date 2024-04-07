@@ -1,10 +1,10 @@
-package mx.gob.oaxaca.nombre_proyecto;
+package mx.gob.oaxaca.tarjetaJoven;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class nombreproyectoApplicationTests {
+class tarjetaJovenApplicationTests {
 
 	@Test
 	void contextLoads() {

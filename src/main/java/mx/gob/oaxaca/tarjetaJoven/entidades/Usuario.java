@@ -1,4 +1,4 @@
-package mx.gob.oaxaca.nombre_proyecto.entidades;
+package mx.gob.oaxaca.tarjetaJoven.entidades;
 
 import javax.persistence.*;
 import lombok.AllArgsConstructor;

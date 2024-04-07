@@ -1,8 +1,5 @@
-package mx.gob.oaxaca.nombre_proyecto.security;
+package mx.gob.oaxaca.tarjetaJoven.security;
 
-import io.jsonwebtoken.Jwts;
-
-import javax.crypto.SecretKey;
 import java.util.Date;
 
 public class TokenJwtConfig {

@@ -5,10 +5,10 @@
  * @autor-mail jack.skell.loki@gmail.com
  * @date 07/02/2024
  */
-package mx.gob.oaxaca.nombre_proyecto.security;
+package mx.gob.oaxaca.tarjetaJoven.security;
 
-import mx.gob.oaxaca.nombre_proyecto.entidades.Usuario;
-import mx.gob.oaxaca.nombre_proyecto.repositorios.UsuarioRepositorioJPA;
+import mx.gob.oaxaca.tarjetaJoven.entidades.Usuario;
+import mx.gob.oaxaca.tarjetaJoven.repositorios.UsuarioRepositorioJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;

@@ -5,7 +5,7 @@
  * @autor-mail jack.skell.loki@gmail.com
  * @date 07/02/2024
  */
-package mx.gob.oaxaca.nombre_proyecto.security;
+package mx.gob.oaxaca.tarjetaJoven.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

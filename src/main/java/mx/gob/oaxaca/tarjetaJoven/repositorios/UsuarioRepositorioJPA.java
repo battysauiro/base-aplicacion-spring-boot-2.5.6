@@ -1,9 +1,8 @@
-package mx.gob.oaxaca.nombre_proyecto.repositorios;
+package mx.gob.oaxaca.tarjetaJoven.repositorios;
 
 
-import mx.gob.oaxaca.nombre_proyecto.entidades.Usuario;
+import mx.gob.oaxaca.tarjetaJoven.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

@@ -1,13 +1,13 @@
-package mx.gob.oaxaca.nombre_proyecto;
+package mx.gob.oaxaca.tarjetaJoven;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class nombre_proyectoApplication {
+public class tarjetaJovenApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(nombre_proyectoApplication.class, args);
+		SpringApplication.run(tarjetaJovenApplication.class, args);
 	}
 
 }

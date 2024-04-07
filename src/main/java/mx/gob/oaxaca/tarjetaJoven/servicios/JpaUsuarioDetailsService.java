@@ -1,7 +1,7 @@
-package mx.gob.oaxaca.nombre_proyecto.servicios;
+package mx.gob.oaxaca.tarjetaJoven.servicios;
 
-import mx.gob.oaxaca.nombre_proyecto.entidades.Usuario;
-import mx.gob.oaxaca.nombre_proyecto.repositorios.UsuarioRepositorioJPA;
+import mx.gob.oaxaca.tarjetaJoven.entidades.Usuario;
+import mx.gob.oaxaca.tarjetaJoven.repositorios.UsuarioRepositorioJPA;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

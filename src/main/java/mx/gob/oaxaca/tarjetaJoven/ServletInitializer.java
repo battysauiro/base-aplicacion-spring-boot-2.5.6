@@ -1,4 +1,4 @@
-package mx.gob.oaxaca.nombre_proyecto;
+package mx.gob.oaxaca.tarjetaJoven;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(nombre_proyectoApplication.class);
+		return application.sources(tarjetaJovenApplication.class);
 	}
 
 }
