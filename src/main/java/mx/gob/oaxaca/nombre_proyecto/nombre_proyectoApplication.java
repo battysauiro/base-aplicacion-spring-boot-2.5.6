@@ -1,13 +1,13 @@
-package IOI.myinovationsapp;
+package mx.gob.oaxaca.nombre_proyecto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InteractiveOnlineInnovationsApplication {
+public class nombre_proyectoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InteractiveOnlineInnovationsApplication.class, args);
+		SpringApplication.run(nombre_proyectoApplication.class, args);
 	}
 
 }
